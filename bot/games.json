@@ -1,0 +1,75 @@
+{
+    "games": {
+        "rps": {
+            "name": "Камень-ножницы-бумага",
+            "emoji": "✊",
+            "min_players": 1,
+            "max_players": 3,
+            "description": "Классическая игра на удачу и стратегию.",
+            "actions": [
+                "Камень ✊",
+                "Ножницы ✌️",
+                "Бумага ✋"
+            ],
+            "rules": {
+                "Камень ✊": "побеждает Ножницы ✌️",
+                "Ножницы ✌️": "побеждает Бумага ✋",
+                "Бумага ✋": "побеждает Камень ✊"
+            },
+            "mechanics": {
+                "single_player": "игрок против бота (случайный выбор)",
+                "multi_player": "поочередный ход игроков, результаты сравниваются после каждого хода",
+                "turn_order": "sequential",
+                "bot_difficulty": "random",
+                "result_resolution": "сравнение выборов по правилам, определение победителя или ничьей"
+            }
+        },
+        "tictactoe": {
+            "name": "Крестики-нолики",
+            "emoji": "❌",
+            "min_players": 1,
+            "max_players": 2,
+            "description": "Классическая игра на поле 3x3.",
+            "mechanics": {
+                "single_player": "игрок против бота (случайный ход)",
+                "multi_player": "игроки ходят по очереди, первый игрок — крестики, второй — нолики",
+                "field_size": "3x3",
+                "win_conditions": [
+                    "3 в ряд по горизонтали",
+                    "3 в ряд по вертикали",
+                    "3 в ряд по диагонали"
+                ],
+                "bot_difficulty": "random",
+                "turn_order": "alternating",
+                "result_resolution": "проверка победы или ничьей после каждого хода"
+            }
+        },
+        "dice": {
+            "name": "Кости",
+            "emoji": "🎲",
+            "min_players": 1,
+            "max_players": 3,
+            "description": "Кто выбросит больше — тот и победил.",
+            "mechanics": {
+                "single_player": "игрок бросает кубик против бота (случайное значение)",
+                "multi_player": "все игроки бросают кубик одновременно",
+                "dice_range": "1-6",
+                "turn_order": "simultaneous",
+                "bot_difficulty": "random",
+                "result_resolution": "сравнение результатов, при ничьей — повторный бросок между игроками с одинаковым результатом",
+                "tie_handling": "re-roll until tie broken"
+            }
+        }
+    },
+    "bot_mode": {
+        "enabled": true,
+        "description": "Если игрок один, он может выбрать игру против бота в любой из игр.",
+        "games_supported": [
+            "rps",
+            "tictactoe",
+            "dice"
+        ]
+    },
+    "timeout": 60,
+    "cleanup": true
+}
