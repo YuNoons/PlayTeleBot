@@ -1,0 +1,49 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+bot/game.db
+bot/game.db-shm
+bot/game.db-wal
+
+# Configuration and secrets
+bot/config.json
+bot/OWNER_ID.env
+*.env
+.env
+.env*.local
+
+# Node/npm dependency directories
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Tauri build outputs and targets
+**/src-tauri/target/
+**/src-tauri/gen/schemas/
+**/src-tauri/gen/android/
+**/src-tauri/gen/apple/
+
+# Logs
+*.log
+logs/
+
+# Editor and OS settings
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
